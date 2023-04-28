@@ -7,6 +7,12 @@ const Hero: React.FC = () => {
         <section id='home' className='relative'>
             <div className='w-screen'>
                 <StaticImage
+                    className='sm:block lg:hidden'
+                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/landscape-modern-farmhouse-wide-night-mobile.jpg'
+                    alt='Total Electric Pro'
+                />
+                <StaticImage
+                    className='hidden lg:block'
                     src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/landscape-modern-farmhouse-wide-night.jpg'
                     alt='Total Electric Pro'
                 />
@@ -18,9 +24,9 @@ const Hero: React.FC = () => {
             <div className='absolute top-0 left-0 w-full h-full flex'>
                 <div className='mx-auto max-w-7xl flex items-center'>
                     <div className='w-1/2 pl-6'>
-                        <p className='text-white text-6xl font-bold '>
-                            Residential & Commercial Electrical Services in{' '}
-                            <br /> San Antonio and Surrounding Areas
+                        <p className='text-white lg:text-7xl font-bold sm:text-8xl'>
+                            Residential & Commercial Electrical Services <br />{' '}
+                            in San Antonio and Surrounding Areas
                         </p>
                     </div>
                 </div>

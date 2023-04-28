@@ -52,8 +52,8 @@ const IndexPage: React.FC<PageProps> = () => {
                 id='ContentV3MainContent'
                 className='mx-auto max-w-7xl p-6 flex'
             >
-                <div className='lg:w-1/2'>
-                    <h2 className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
+                <div className='lg:w-1/2 sm:w-1/2'>
+                    <h2 className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
                         We're here for you!
                     </h2>
                     <p className='mt-6 text-lg leading-8 text-gray-600'>
@@ -73,10 +73,6 @@ const IndexPage: React.FC<PageProps> = () => {
                     </p>
                 </div>
                 <div className='lg:w-1/2 flex justify-end'>
-                    {/* <img
-                        className='h-auto w-auto'
-                        src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/HouseOutdoorLights.jpg'
-                    /> */}
                     <StaticImage
                         src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/HouseOutdoorLights.jpg'
                         alt='Total Electric Pro'
@@ -129,7 +125,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 <h2 className='text-3xl font-bold tracking-tight text-gray-900'>
                                     Get in touch
                                 </h2>
-                                <p className='mt-6 text-lg leading-8 text-gray-600'>
+                                <p className='mt-6 lg:text-lg sm:text-sm leading-8 text-gray-600'>
                                     We're here to help! If you have any
                                     questions, need more information, or would
                                     like to schedule a service, please fill out
@@ -201,7 +197,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <form
                             action='#'
                             method='POST'
-                            className='px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48'
+                            className='px-6 pb-24 pt-16 sm:pb- lg:pb-32 lg:px-8 lg:py-48'
                         >
                             <div className='mx-auto max-w-xl lg:mr-0 lg:max-w-lg'>
                                 <div className='grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2'>
