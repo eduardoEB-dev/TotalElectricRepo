@@ -13,13 +13,13 @@ const config: GatsbyConfig = {
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
-                name: 'Your Site Name',
-                short_name: 'Short Name',
+                name: 'Total Electric Pro',
+                short_name: 'TEP',
                 start_url: '/',
                 background_color: '#ffffff',
                 theme_color: '#663399',
                 display: 'minimal-ui',
-                icon: 'https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/favicon.png'
+                icon: 'favicon-16x16.png'
             }
         },
         'gatsby-plugin-react-helmet',
