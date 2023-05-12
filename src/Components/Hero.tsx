@@ -8,12 +8,12 @@ const Hero: React.FC = () => {
             <div className='w-screen'>
                 <StaticImage
                     className='sm:block lg:hidden'
-                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/IMG_5390.jpg'
+                    src='../images/IMG_5390.jpg'
                     alt='Total Electric Pro'
                 />
                 <StaticImage
                     className='hidden lg:block'
-                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/IMG_5390.jpg'
+                    src='../images/IMG_5390.jpg'
                     alt='Total Electric Pro'
                 />
             </div>
