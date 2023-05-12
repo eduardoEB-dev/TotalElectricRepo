@@ -6,7 +6,7 @@ const Header: React.FC = () => {
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
             <div className='flex h-16 justify-between'>
                 <StaticImage
-                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/Total%20Electric%20Pro%20Min.png'
+                    src='../../images/Total-Electric-Pro-Min.png'
                     alt='Total Electric Pro'
                     height={320}
                 />
