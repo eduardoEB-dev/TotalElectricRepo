@@ -15,6 +15,7 @@ const config: GatsbyConfig = {
             options: {
                 name: 'Total Electric Pro',
                 short_name: 'TEP',
+                path: `${__dirname}/src/images`,
                 start_url: '/',
                 background_color: '#ffffff',
                 theme_color: '#663399',
