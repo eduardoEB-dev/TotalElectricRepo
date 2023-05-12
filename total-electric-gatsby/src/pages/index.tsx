@@ -5,6 +5,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 import '../styles/global.css';
 import Header from '../Components/Header/Header';
 import Hero from '../Components/Hero';
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 import {
     BuildingOffice2Icon,
     EnvelopeIcon,
@@ -13,27 +15,36 @@ import {
 } from '@heroicons/react/24/outline';
 
 const IndexPage: React.FC<PageProps> = () => {
+    const options = {
+        type: 'loop',
+        gap: '1rem',
+        autoplay: true,
+        pauseOnHover: true,
+        resetProgress: false,
+        height: '40rem'
+    };
+
     const [isShowing, setIsShowing] = React.useState(false);
 
     const features = [
         {
             name: 'Panel Repair',
-            description: `Our experienced electricians are skilled in repairing and maintaining electrical panels to ensure they are functioning safely and efficiently. Whether it's fixing faulty circuit breakers, replacing worn-out fuses, or repairing loose connections, we have the expertise to restore the integrity of your electrical panel. We use industry-leading techniques and high-quality components to repair or replace damaged or outdated components, ensuring that your electrical panel meets the highest safety standards and complies with local electrical codes. With our professional electrical panel repair services, you can have peace of mind knowing that your electrical systems are in capable hands, and your building's electrical distribution is reliable and safe.`
+            description: `Our experienced electricians are skilled in repairing and maintaining electrical panels to ensure they are functioning safely and efficiently. Whether it's fixing faulty circuit breakers, replacing worn-out fuses, or repairing loose connections, we have the expertise to restore the integrity of your electrical panel. We use industry-leading techniques and high-quality components to repair or replace damaged or outdated components, ensuring that your electrical panel meets the highest safety standards and complies with local electrical codes.`
             //   icon: TrashIcon,
         },
         {
             name: 'Trouble Shooting Electrical Issues',
-            description: `Our skilled electricians are trained in diagnosing and resolving electrical issues efficiently and effectively. From identifying the root cause of circuit failures to resolving electrical malfunctions, we have the expertise to troubleshoot and diagnose a wide range of electrical problems. Using state-of-the-art diagnostic tools and techniques, we quickly assess electrical issues and provide reliable solutions to get your electrical systems back up and running smoothly. Whether it's a tripping circuit breaker, a flickering light, or an electrical outage, our troubleshooting services ensure that your electrical systems are safe, reliable, and compliant with electrical codes.`
+            description: `Our skilled electricians are trained in diagnosing and resolving electrical issues efficiently and effectively. From identifying the root cause of circuit failures to resolving electrical malfunctions, we have the expertise to troubleshoot and diagnose a wide range of electrical problems. Using state-of-the-art diagnostic tools and techniques, we quickly assess electrical issues and provide reliable solutions to get your electrical systems back up and running smoothly.`
             //   icon: PencilSquareIcon,
         },
         {
             name: 'Custom Lighting',
-            description: `Enhance the aesthetic appeal and functionality of your space with our custom lighting solutions. Our skilled electricians are experts in designing, installing, and maintaining custom lighting systems that are tailored to your unique needs and preferences. Whether you're looking to add ambiance to your home, showcase your business, or create a stunning outdoor lighting display, we can bring your vision to life. From intricate interior lighting designs to eye-catching outdoor lighting installations, we use premium lighting fixtures, advanced control systems, and creative design techniques to create lighting solutions that transform your space into a visually captivating and inviting environment. Let us help you elevate your lighting experience with our professional custom lighting services.`
+            description: `Enhance the aesthetic appeal and functionality of your space with our custom lighting solutions. Our skilled electricians are experts in designing, installing, and maintaining custom lighting systems that are tailored to your unique needs and preferences. Whether you're looking to add ambiance to your home, showcase your business, or create a stunning outdoor lighting display, we can bring your vision to life.`
             //   icon: ChatBubbleOvalLeftEllipsisIcon,
         },
         {
             name: 'Remodeling',
-            description: `Whether you're renovating your home, updating your business, or remodeling a commercial property, our experienced electricians can assist you with all your electrical needs. We offer comprehensive electrical remodeling services that include electrical design, installation, and upgrades to meet the specific requirements of your remodeling project. From adding new electrical circuits to installing energy-efficient lighting, from upgrading electrical panels to rewiring for modern appliances, we have the expertise to ensure that your electrical systems are safe, reliable, and compliant with local electrical codes. Our skilled electricians work closely with you, your contractors, and designers to seamlessly integrate electrical components into your project. Trust us to deliver top-quality electrical remodeling solutions that meet your needs and exceed your expectations.`
+            description: `Whether you're renovating your home, updating your business, or remodeling a commercial property, our experienced electricians can assist you with all your electrical needs. We offer comprehensive electrical remodeling services that include electrical design, installation, and upgrades to meet the specific requirements of your remodeling project.`
             //   icon: HeartIcon,
         }
     ];
@@ -52,7 +63,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 id='ContentV3MainContent'
                 className='mx-auto max-w-7xl p-6 flex'
             >
-                <div className='lg:w-1/2 sm:w-1/2'>
+                <div className='lg:w-1/2 sm:w-1/2 mr-20'>
                     <h2 className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
                         We're here for you!
                     </h2>
@@ -62,21 +73,92 @@ const IndexPage: React.FC<PageProps> = () => {
                         electrical company that can handle any job, big or
                         small. We are committed to providing our customers with
                         the highest quality of service and workmanship. We are
-                        licensed, bonded, and insured. We are also a member of
-                        the Better Business Bureau and have an A+ rating. We are
-                        proud to be a family-owned and operated business. We are
-                        committed to providing our customers with the highest
-                        quality of service and workmanship. We are licensed,
-                        bonded, and insured. We are also a member of the Better
-                        Business Bureau and have an A+ rating. We are proud to
-                        be a family-owned and operated business.
+                        licensed, bonded, and insured. We are proud to be a
+                        family-owned and operated business with a commitment to
+                        provide our customers with the highest quality of
+                        service and workmanship.
                     </p>
                 </div>
                 <div className='lg:w-1/2 flex justify-end'>
-                    <StaticImage
-                        src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/HouseOutdoorLights.jpg'
-                        alt='Total Electric Pro'
-                    />
+                    <Splide
+                        aria-label='My Favorite Images'
+                        options={options}
+                        aria-labelledby='autoplay-example-heading'
+                        hasTrack={false}
+                    >
+                        <SplideTrack>
+                            <SplideSlide>
+                                <img
+                                    className='object-contain'
+                                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/60107504666__039FE174-B197-4A96-98F4-8AA8A9C6097A.JPG'
+                                    alt='Image 1'
+                                />
+                            </SplideSlide>
+                            <SplideSlide>
+                                <img
+                                    className='object-contain'
+                                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/61730490841__9E79195F-6D34-4DC8-B9E6-8454C5D0AA89.JPG'
+                                    alt='Image 2'
+                                />
+                            </SplideSlide>
+                            <SplideSlide>
+                                <img
+                                    className='object-contain'
+                                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/60107504666__039FE174-B197-4A96-98F4-8AA8A9C6097A.JPG'
+                                    alt='Image 3'
+                                />
+                            </SplideSlide>
+                            <SplideSlide>
+                                <img
+                                    className='object-contain'
+                                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/57713481425__CEA1081C-3B03-44BB-974D-E424F58538B6.JPG'
+                                    alt='Image 4'
+                                />
+                            </SplideSlide>
+                            <SplideSlide>
+                                <img
+                                    className='object-contain'
+                                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/IMG_0420.JPG'
+                                    alt='Image 5'
+                                />
+                            </SplideSlide>
+                            <SplideSlide>
+                                <img
+                                    className='object-contain'
+                                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/IMG_0422.JPG'
+                                    alt='Image 6'
+                                />
+                            </SplideSlide>
+                            <SplideSlide>
+                                <img
+                                    className='object-contain'
+                                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/HouseOutdoorLights.jpg'
+                                    alt='Image 7'
+                                />
+                            </SplideSlide>
+                            <SplideSlide>
+                                <img
+                                    className='object-contain'
+                                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/341162703_1642579116166137_8026099221166022931_n.jpg'
+                                    alt='Image 8'
+                                />
+                            </SplideSlide>
+                            <SplideSlide>
+                                <img
+                                    className='object-contain'
+                                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/IMG_7472.JPG'
+                                    alt='Image 9'
+                                />
+                            </SplideSlide>
+                            <SplideSlide>
+                                <img
+                                    className='object-contain'
+                                    src='https://raw.githubusercontent.com/eduardoEB-dev/Images/main/TotalElectricPro/IMG_7475.JPG'
+                                    alt='Image 10'
+                                />
+                            </SplideSlide>
+                        </SplideTrack>
+                    </Splide>
                 </div>
             </section>
             <section
@@ -195,15 +277,15 @@ const IndexPage: React.FC<PageProps> = () => {
                             </div>
                         </div>
                         <form
-                            action='#'
+                            target='_blank'
+                            action='https://formsubmit.co/esteuardo@gmail.com'
                             method='POST'
-                            className='px-6 pb-24 pt-16 sm:pb- lg:pb-32 lg:px-8 lg:py-48'
                         >
                             <div className='mx-auto max-w-xl lg:mr-0 lg:max-w-lg'>
                                 <div className='grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2'>
                                     <div>
                                         <label
-                                            htmlFor='first-name'
+                                            htmlFor='firstname'
                                             className='block text-sm font-semibold leading-6 text-gray-900'
                                         >
                                             First name
@@ -211,8 +293,8 @@ const IndexPage: React.FC<PageProps> = () => {
                                         <div className='mt-2.5'>
                                             <input
                                                 type='text'
-                                                name='first-name'
-                                                id='first-name'
+                                                name='firstname'
+                                                id='firstname'
                                                 autoComplete='given-name'
                                                 className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                                             />
@@ -220,7 +302,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                     </div>
                                     <div>
                                         <label
-                                            htmlFor='last-name'
+                                            htmlFor='lastname'
                                             className='block text-sm font-semibold leading-6 text-gray-900'
                                         >
                                             Last name
@@ -228,8 +310,8 @@ const IndexPage: React.FC<PageProps> = () => {
                                         <div className='mt-2.5'>
                                             <input
                                                 type='text'
-                                                name='last-name'
-                                                id='last-name'
+                                                name='lastname'
+                                                id='lastname'
                                                 autoComplete='family-name'
                                                 className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                                             />
@@ -254,7 +336,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                     </div>
                                     <div className='sm:col-span-2'>
                                         <label
-                                            htmlFor='phone-number'
+                                            htmlFor='phonenumber'
                                             className='block text-sm font-semibold leading-6 text-gray-900'
                                         >
                                             Phone number
@@ -262,8 +344,8 @@ const IndexPage: React.FC<PageProps> = () => {
                                         <div className='mt-2.5'>
                                             <input
                                                 type='tel'
-                                                name='phone-number'
-                                                id='phone-number'
+                                                name='phonenumber'
+                                                id='phonenumber'
                                                 autoComplete='tel'
                                                 className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                                             />
