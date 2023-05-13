@@ -72,37 +72,13 @@
             href="https://unpkg.com/@splidejs/splide@3.0.9/dist/css/splide.min.css"
         />
         <script src="https://unpkg.com/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
-
         <script src="https://cdn.tailwindcss.com"></script>
-
-        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            clifford: '#da373d'
-                        }
-                    }
-                }
-            };
-        </script>
-
-        <style type="text/tailwindcss">
-            @layer utilities {
-                .content-auto {
-                    content-visibility: auto;
-                }
-            }
-        </style>
     </head>
 
     <body>
         <div class="main-wrapper">
             <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 justify-between">
-                    <!-- <span class="shrink lg:w-1/2"> -->
                     <span class="w-120 shrink-0">
                         <img
                             src="static/Total-Electric-Pro-Min.png"
@@ -110,7 +86,6 @@
                             class="h-full w-auto"
                         />
                     </span>
-
                     <div class="flex shrink-0">
                         <ul class="ml-6 flex space-x-8">
                             <a
@@ -138,7 +113,6 @@
                                 <span class="hidden lg:inline-block"
                                     >Get in Touch</span
                                 >
-                                <!-- <i class=" fa-solid fa-helmet-safety"></i> -->
                                 <i class="lg:hidden fa-solid fa-message"></i>
                             </a>
                             <a
@@ -519,14 +493,15 @@
                         >
                             <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
                                 <div
-                                    class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2"
+                                    class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 py-24"
                                 >
                                     <div>
                                         <label
                                             for="firstname"
                                             class="block text-sm font-semibold leading-6 text-gray-900"
-                                            >First name</label
                                         >
+                                            First name
+                                        </label>
                                         <div class="mt-2.5">
                                             <input
                                                 type="text"
@@ -541,8 +516,9 @@
                                         <label
                                             for="lastname"
                                             class="block text-sm font-semibold leading-6 text-gray-900"
-                                            >Last name</label
                                         >
+                                            Last name
+                                        </label>
                                         <div class="mt-2.5">
                                             <input
                                                 type="text"
@@ -557,8 +533,9 @@
                                         <label
                                             for="email"
                                             class="block text-sm font-semibold leading-6 text-gray-900"
-                                            >Email</label
                                         >
+                                            Email
+                                        </label>
                                         <div class="mt-2.5">
                                             <input
                                                 type="email"
@@ -597,7 +574,8 @@
                                                 id="message"
                                                 rows="4"
                                                 class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                            ></textarea>
+                                            >
+                                            </textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -633,25 +611,10 @@
                 </svg>
             </a>
         </div>
-
-        <script id="gatsby-script-loader">
-            /*<![CDATA[*/ window.pagePath = '/'; /*]]>*/
-        </script>
-        <!-- slice-start id="_gatsby-scripts-1" -->
-        <script id="gatsby-chunk-mapping">
-            window.___chunkMapping =
-                '{"app":["/app-cb8df2a2701e55f6b19f.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-869ca30a9a2b44a79dfb.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-d4145aa613236a6a99dc.js"]}';
-        </script>
-        <script>
-            window.___webpackCompilationHash = '922773e50183c797f94b';
-        </script>
-        <script src="/webpack-runtime-86abf2888ed2f6b8dbbb.js" async></script>
-        <script src="/framework-d5a6dbf82e59c48838fd.js" async></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 new Splide('.splide', {
                     type: 'loop',
-                    // height: ,
                     perPage: 2,
                     perMove: 1,
                     gap: 10,
