@@ -15,7 +15,6 @@ const config: GatsbyConfig = {
             options: {
                 name: 'Total Electric Pro',
                 short_name: 'TEP',
-                path: `${__dirname}/src/images`,
                 start_url: '/',
                 background_color: '#ffffff',
                 theme_color: '#663399',
@@ -27,7 +26,15 @@ const config: GatsbyConfig = {
         'gatsby-plugin-sitemap',
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
-        `gatsby-transformer-sharp`
+        `gatsby-transformer-sharp`,
+        `gatsby-source-filesystem`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: `${__dirname}/src/images`
+            }
+        }
     ]
 };
 
