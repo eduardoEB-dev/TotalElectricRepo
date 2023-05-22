@@ -1398,6 +1398,10 @@ select {
     margin-top: 6rem;
   }
 
+  .lg\:mr-20 {
+    margin-right: 5rem;
+  }
+
   .lg\:inline-block {
     display: inline-block;
   }
