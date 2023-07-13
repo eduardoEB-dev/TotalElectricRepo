@@ -1560,6 +1560,10 @@ select {
     grid-column-start: 6;
   }
 
+  .lg\:col-start-7 {
+    grid-column-start: 7;
+  }
+
   .lg\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
